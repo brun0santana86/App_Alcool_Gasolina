@@ -1,0 +1,47 @@
+<!--pagina home do app-->
+<ion-content padding>
+    <!-- criacao do grid na tela home -->
+    <ion-grid>
+      <!-- criacao da row 1 na tela home -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-img src="/assets/logo.png"></ion-img>
+        </ion-col>  
+      </ion-row>
+      <!-- criacao da row 2 na tela home -->
+      <ion-row>
+        <ion-col size="12">
+          <h4>Saiba qual a melhor opção para abastecimento do seu carro.</h4>
+        </ion-col>  
+      </ion-row>
+      <!-- criacao da row 3 na tela home -->
+      <ion-row>
+        <ion-col size="12">
+          <!-- criacao de item na tela home -->
+          <ion-item>
+            <ion-label class="ion-text-center" position="stacked">Preco do Alcool, ex.: 1,90</ion-label>
+            <ion-input type="number" [(ngModel)]="precoAlcool"></ion-input>
+          </ion-item>
+          <!-- criacao de item na tela home -->
+          <ion-item>
+            <ion-label class="ion-text-center" position="stacked">Preco da Gasolina, ex.: 2,90</ion-label>
+            <ion-input type="number" [(ngModel)]="precoGasolina"></ion-input>
+          </ion-item>
+          <!-- criacao do botao tela cheia para calcular com acao de click que direciona para o metodo -->
+          <ion-button expand="block" (click)="calcular()">Calcular</ion-button>
+
+
+        </ion-col>  
+      </ion-row>
+      <!-- cricacao da row para exibir o resultado -->
+       <ion-row>
+        <ion-col size="12">
+          <h5 class="ion-text-center"> {{ resultado }} </h5>
+        </ion-col>  
+      </ion-row>
+
+
+    </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-text-center" id="footer">Desenvolvido by Bruno de Santana</ion-footer>
